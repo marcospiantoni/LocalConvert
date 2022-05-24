@@ -1,10 +1,5 @@
 <h1> LocalConvert </h1>
 
-![unnamed](https://user-images.githubusercontent.com/100890415/170072246-c3937764-1a1f-45ef-8c32-a45689cee744.png)
-![unnamed](https://user-images.githubusercontent.com/100890415/170073090-d293acb3-8093-417f-955c-8aa6da165cd3.png)
-![6c22bcfa-bd98-459e-b827-92f94cb30e3e](https://user-images.githubusercontent.com/100890415/170073547-3bd5f73f-b801-421f-9ceb-c7e90e6e863d.png)
-![1f558d14-f7d9-4c3f-b3fe-44c6620c62b0](https://user-images.githubusercontent.com/100890415/170074087-3ce6fc6c-f485-4fbc-a423-8c2e6bfe6046.png)
-
 > Status: Projeto finalizado ✔️
 
 <h1> Sobre o projeto </h1>
@@ -46,4 +41,12 @@ Linkedin: www.linkedin.com/in/marcospiantoni
 + HTML
 + CSS
 + JavaScript
+
+<h1> Imagens do Projeto- LocalConvert </h1>
+
+![unnamed](https://user-images.githubusercontent.com/100890415/170072246-c3937764-1a1f-45ef-8c32-a45689cee744.png)
+![unnamed](https://user-images.githubusercontent.com/100890415/170073090-d293acb3-8093-417f-955c-8aa6da165cd3.png)
+![6c22bcfa-bd98-459e-b827-92f94cb30e3e](https://user-images.githubusercontent.com/100890415/170073547-3bd5f73f-b801-421f-9ceb-c7e90e6e863d.png)
+![1f558d14-f7d9-4c3f-b3fe-44c6620c62b0](https://user-images.githubusercontent.com/100890415/170074087-3ce6fc6c-f485-4fbc-a423-8c2e6bfe6046.png)
+![911e52a3-2c63-4aa5-a3c9-248deedf82ef](https://user-images.githubusercontent.com/100890415/170074366-3cff477c-dc24-4e67-bd73-b4b5a54900d0.png)
 
