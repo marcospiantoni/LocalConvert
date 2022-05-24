@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LocalConvert </title>
+    <!-- conexao css -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="icon" href="./assets/logo.jpg">
+</head>
+
+<body>
+    <!------- Conversor de temperatura  ------->
+    <form>
+        <div id="all">
+            <div id="temp">
+                <h1 id="h1temp"> Conversor de temperatura </h1>
+                <!-- Celsius para Fahrenheit e Kelvin  -->
+                <div id="celsius">
+                    <label> Celsius </label>
+                    <input id="inputFahrenheitC" type="number" placeholder="Celsius"
+                        oninput="temperaturaConverterCF(this.value)" onchange="temperaturaConverterCF(this.value)"><br>
+                    em Fahrenheit: <span id="outCFahrenheit"></span><br>
+
+                    <label>Celsius</label>
+                    <input id="inputKelvinC" type="number" placeholder="Celsius"
+                        oninput="temperaturaConverterCK(this.value)" onchange="temperaturaConverterCK(this.value)"><br>
+                    em Kelvin: <span id="outCKelvin"></span>
+                </div>
+
+
+                <!-- Fahrenheit para Celsius e Kelvin  -->
+
+                <div id="fahrenheit">
+                    <label> Fahrenheit </label>
+                    <input id="inputCelsiusF" type="number" placeholder="Fahrenheit"
+                        oninput="temperaturaConverterFC(this.value)" onchange="temperaturaConverterFC(this.value)"><br>
+                    em Celsius: <span id="outFCelsius"></span><br>
+
+                    <label> Fahrenheit </label>
+                    <input id="inputKelvinF" type="number" placeholder="Fahrenheit"
+                        oninput="temperaturaConverterFK(this.value)" onchange="temperaturaConverterFK(this.value)"><br>
+                    em Kelvin: <span id="outFKelvin"></span>
+                </div>
+
+
+                <!-- Kelvin para Celsius e Fahrenheit  -->
+                <div id="kelvin">
+                    <label> Kelvin </label>
+                    <input id="inputCelsiusKC" type="number" placeholder="Kelvin"
+                        oninput="temperaturaConverterKC(this.value)" onchange="temperaturaConverterKC(this.value)"><br>
+                    em Celsius: <span id="outKCelsius"></span><br>
+
+                    <label> Kelvin </label>
+                    <input id="inputCelsiusKF" type="number" placeholder="Kelvin"
+                        oninput="temperaturaConverterKF(this.value)" onchange="temperaturaConverterKF(this.value)"><br>
+                    em Fahrenheit: <span id="outKFahrenheit"></span><br><br>
+
+                    <button type="reset" id="limparTemp" onmouseover="onOver(this)" onmouseout="onOut(this)"> Limpar
+                    </button>
+                </div>
+            </div>
+    </form>
+
+    <!------------MAIUSCULO e minusculo  -------------->
+
+    <div id="Ctexto">
+        <form>
+            <h1 id="h1text"> Conversor de texto </h1>
+            <textarea nome="texto" id="texto" placeholder="Digite seu texto aqui"></textarea><br><br>
+            <input type="button" onclick="MAIÚSCULO()" value="MAIÚSCULA">
+            <input type="button" onclick="minúscula()" value="minúscula">
+
+            <p id="resultado"></p>
+            <br><br><button type="reset" id="limparText" onmouseover="onOver(this)" onmouseout="onOut(this)"> Limpar
+            </button>
+        </form>
+    </div>
+
+
+    <!---------- Conversor de velocidade --------->
+
+
+    <div id="velo">
+        <h1 id="h1velo"> Conversor de velocidade</h1>
+        <!-- milhas para km -->
+        <form>
+            <label> MPH </label>
+            <input id="inputMPH" type="number" placeholder="MPH" oninput="velocidadeConverter(this.value)"
+                onChange="velocidadeConverter(this.value)">
+
+            <br><br> em KPH: <span id="outKPH" placeholder="KPH"> </span>
+
+            <br><br> <!-- km para milhas  -->
+
+            <label> KPH </label>
+            <input id="inputKPH" type="number" placeholder="KPH" oninput="velocidadeConverterK(this.value)"
+                onChange="velocidadeConverterK(this.value)">
+
+            <br><br> em MPH: <span id="outMPH" placeholder="MPH"> </span>
+            <br><br><br><br>
+            <button id="LimparVelo" type="reset" onmouseover="onOver(this)" onmouseout="onOut(this)"> Limpar </button>
+        </form>
+    </div>
+
+
+    <!---------- Conversor de distância  --------->
+    <div id="dist">
+        <form>
+            <h1 id="h1Dist"> Conversor de distância </h1>
+            <!-- milhas p km  -->
+            <label> Milhas </label>
+            <input id="inputMILHAS" type="number" placeholder="Milhas" oninput="DistanciaConverter(this.value)"
+                onChange="DistanciaConverter(this.value)">
+
+            <br><br> em Km: <span id="outKm" placeholder="Km"> </span>
+            <br><br>
+            <!-- km p milhas  -->
+
+            <label> Km </label>
+            <input id="inputKm" type="number" placeholder="Km" oninput="DistanciaConverterK(this.value)"
+                onChange="DistanciaConverterK(this.value)">
+
+            <br><br> em Milhas: <span id="outMilhas" placeholder="Milhas"> </span>
+            <br><br><br><br>
+            <button type="reset" id="limpardist" onmouseover="onOver(this)" onmouseout="onOut(this)"> Limpar </button>
+        </form>
+    </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="totalInfo">
+        <div id="temperatura">
+
+            <h1 class="h1"> Escala Celsius </h1>
+            <p class="textI"> Criado no ano de 1742 pelo físico Sueco Anders Celsius, a escala Celsius (°C),
+                é a mais comum das escalas termométricas usada na
+                maioria dos países do mundo. Essa escala é baseada de acordo na água pura tendo pontos fixos de fusão do
+                gelo (0 °C) e de ebulição da água (100 °C), em condições normais de pressão.
+                Anders colocou um termômetro dentro de um recipiente de água e gelo, em equilíbrio térmico, e,
+                na posição que o mercúrio estabilizou, marcou o ponto 0. Depois, colocou o termômetro na água em
+                ebulição e
+                quando o mercúrio estabilizou, marcou o ponto 100. Assim foi criada a escala Celsius.
+                Sua vantagem é que ela pode ser usada em qualquer local do planet. Pois, no nível do mar,
+                a água sempre se transforma em gelo e entra em ebulição no mesmo ponto.
+            </p>
+
+            <h1 class="h1"> Escala Fahrenheit </h1>
+            <p class="textI"> Ainda utilizada em poucos países(como Estados Unidos, Bahamas, Belize, Ilhas Caimão,
+                Palau, Porto Rico,
+                Guam e Ilhas Virgens Americanas), essa escala foi criada em 1724 por, Daniel Gabriel Fahrenheit,
+                inventor do termômetro de mercúrio.
+                Para isso, ele escolheu dois pontos de partida fixos:
+                o valor do ponto de fusão (32°F) e de ebulição da água (212°F).
+                No começo, ele colocou o termômetro, sem nenhuma escala, dentro de uma mistura de água,
+                gelo e sal de amônio. O mercúrio ficou estacionado em determinada posição, a qual ele chamou de zero.
+                Depois, colocou este mesmo termômetro para determinar um segundo ponto, a temperatura do corpo humano.
+                Quando o mercúrio novamente estacionou em determinada posição, ele a marcou e chamou de 100. Depois,
+                dividiu o espaço entre o zero e o 100 em 100 partes iguais e assim foi criada a escala Fahrenheit.
+                Depois disso, quando Fahrenheit colocou o termômetro graduado numa mistura de água e gelo, obteve o
+                valor de 32°F,
+                e, quando o colocou em água fervendo, obteve o valor de 212°F. Então, na escala Fahrenheit,
+                a água vira gelo a 32°F e entra em ebulição a 212°F.</p>
+
+            <h1 class="h1"> Escala Kelvin </h1>
+            <p class="textI"> Tendo como referência a temperatura do zero, temperatura em que a vibração molecular
+                cessa,
+                a escala Kelvin é chamada de escala absoluta e foi estudada pelo físico Inglês William Thompson,
+                conhecido como Lorde Kelvin. Essa escala tem como referência a temperatura do menor estado de agitação
+                de
+                qualquer molécula (0 K) e é calculada a partir da escala Celsius.
+                Diferente de graus Fahrenheit e de Celsius, Kelvin não é referido e nem escrito como um grau(°).
+                Não se usa grau para esta escala, sendo assim, lemos 0 K zero kelvin e não zero grau kelvin.
+                Lord Kelvin deu o valor zero à temperatura de – 273,15 °C, que corresponde à temperatura do zero
+                absoluto.
+                Assim, os pontos de fusão e de ebulição na escala Kelvin correspondem a, a 273 K para fusão e 373 K para
+                ebulição.
+                Sendo assim, é a escala utilizada pela comunidade científica.
+            </p>
+        </div>
+
+        <div id="velocidade">
+
+            <h1 class="h1">O que é uma milha?</h1>
+            <p class="textI"> Antes do sistema métrico ser adotado, era apenas uma milha com diferentes versões que eram
+                usadas em
+                todas as partes do mundo. Uma milha contém 1760 jardas, que é igual a 5280
+                pés (1 jarda = 3 pés). É tão generalizada o uso de milhas nos EUA e no Reino Unido que falam em
+                quilometragem
+                quando
+                falam sobre eficiência de carros e falam em milhas por hora quando se referem a velocidades.
+                A velocidade é abreviada como mph e a eficiência de um carro em termos de combustível é referida como
+                mpg.
+                Antes de ser adotada pelos EUA em 1959, a milha britânica e a milha dos EUA eram diferentes e haviam
+                variações
+                nas milhas da maioria dos países. Após a adoção do sistema métrico em 1959, os EUA declararam a
+                definição.
+                Desde então, uma milha contém 1760 jardas e, como tal, é igual a 1609.344 metros. (1 jarda = 3 pés).
+                o Reino Unido e os EUA são os países que usam o Statute Mile como a unidade oficial de comprimento.
+            </p>
+
+            <h1 class="h1"> O que é um quilômetro?</h1>
+            <p class="textI"> Um Kilômetro também abreviado de "KM" é uma unidade de comprimento que contém mil metros.
+                O KM é uma unidade de medida utilizada e aceita em muitos países, no qual 1 km é igual a 0.621371 milhas
+                Por decreto no dia 8 de maio de 1790, a Assembleia Constituinte ordenou que a Academia
+                Francesa de Ciências desenvolvesse um novo sistema de medição. Em agosto de 1793, a Convenção Nacional
+                Francesa
+                decretou o metro como o único sistema de medição de comprimento na República Francesa e baseava-se em
+                1/10 milionésimo da distância dos pólos orbitais (norte ou sul) ao Equador , sendo este uma unidade
+                verdadeiramente
+                internacional. O primeiro nome do quilômetro era "Millaire". Embora o metro tenha sido definido em 1799,
+                o miriâmetro (10.000 metros) era preferível ao "quilómetro" para uso diário.
+                Os holandeses, por outro lado, adotaram o quilômetro em 1817, mas deram-lhe o nome local de mijl.
+                Foi somente em 1867 que o termo "quilômetro" se tornou a única unidade de medida oficial na
+                Holanda para representar 1.000 metros.
+            </p>
+        </div>
+    </div>
+
+    <h1 class="h1"> Tabela de valores em Milhas/h convertidos para Km/h </h1>
+    <div class="tabelaMK">
+        <table>
+            <tr>
+                <th> Milhas/h </th>
+                <th></th>
+                <th> Km/h </th>
+            </tr>
+
+            <tr>
+                <td> 1 (milhas por hora) </td>
+                <td></td>
+                <td> 1.61 Km/h </td>
+            </tr>
+            <tr>
+                <td> 2 (milhas por hora) </td>
+                <td></td>
+                <td> 3.22 Km/h</td>
+            </tr>
+
+            <tr>
+                <td> 5 (milhas por hora) </td>
+                <td></td>
+                <td> 8.05 Km/h</td>
+            </tr>
+
+            <tr>
+                <td> 10 (milhas por hora) </td>
+                <td></td>
+                <td> 16.09 Km/h
+                <td>
+            </tr>
+
+            <tr>
+                <td> 25 (milhas por hora)</td>
+                <td></td>
+                <td> 40.23 Km/h </td>
+            </tr>
+
+            <tr>
+                <td> 50 (milhas por hora)</td>
+                <td></td>
+                <td> 80.47 Km/h</td>
+            </tr>
+
+            <tr>
+                <td> 100 (milhas por hora)</td>
+                <td></td>
+                <td> 160.93 Km/h</td>
+            </tr>
+        </table>
+    </div>
+
+    <h1 class="h1"> Tabela de valores em Milhas convertidos para Km </h1>
+    <div class="tabelaMK">
+        <table>
+            <tr>
+                <th> Milhas </th>
+                <th></th>
+                <th> Km </th>
+            </tr>
+
+            <tr>
+                <td> 1 (milha) </td>
+                <td></td>
+                <td> 2.59 Km </td>
+            </tr>
+            <tr>
+                <td> 2 (milhas) </td>
+                <td></td>
+                <td> 5.18 Km </td>
+            </tr>
+
+            <tr>
+                <td> 5 (milhas) </td>
+                <td></td>
+                <td> 12.95 Km </td>
+            </tr>
+
+            <tr>
+                <td> 10 (milhas) </td>
+                <td></td>
+                <td> 25.90 Km
+                <td>
+            </tr>
+
+            <tr>
+                <td> 25 (milhas)</td>
+                <td></td>
+                <td> 64.75 Km</td>
+            </tr>
+
+            <tr>
+                <td> 50 (milhas) </td>
+                <td></td>
+                <td> 129.50 Km </td>
+            </tr>
+
+            <tr>
+                <td> 100 (milhas) </td>
+                <td></td>
+                <td> 259 Km</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br><br><br><br>
+
+
+
+    <h3> Veja mais </h3>
+    por <a href="https://github.com/marcospiantoni" id="link"> Marcos Piantoni </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------- JS ------->
+    <script src="./script.js"></script>
+</body>
+
+</html>

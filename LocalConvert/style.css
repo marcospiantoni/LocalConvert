@@ -1,0 +1,187 @@
+body {
+    background-color: rgb(137, 148, 153);
+}
+
+
+#temp {
+    display: block;
+    border: solid 5px black;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    background-image: url("./assets/termometro.jpg");
+    background-repeat: no-repeat;
+    background-position: 100px;
+    background-size: 100px;
+    background-position-y: 340px;
+    background-position-x: 250px;
+}
+
+#h1temp {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(30, 144, 255);
+}
+
+#limparTemp {
+    border: solid 2px black;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(65, 105, 225);
+}
+
+
+
+#all {
+    display: inline-flex;
+    text-align: center;
+    margin-top: 95px;
+    margin-left: 0px;
+}
+
+#celsius {
+    margin-top: 20px;
+
+
+
+}
+
+#fahrenheit {
+    margin-top: 20px;
+
+
+}
+
+#kelvin {
+    margin-top: 20px;
+
+}
+
+#Ctexto {
+    margin-left: 10px;
+    border: solid 5px black;
+    font-size: 15px;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: url("./assets/texto.jpg");
+    background-repeat: no-repeat;
+    background-position: 70px;
+    background-size: 150px;
+    background-position-y: 350px;
+    background-color: white;
+}
+
+#texto {
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+}
+
+
+#h1text {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 128);
+}
+
+#limparText {
+    border: solid 2px black;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(65, 105, 225);
+
+}
+
+#velo {
+    margin-left: 10px;
+    border: solid 5px black;
+    font-size: 15px;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: url("./assets/bandeira.jpg");
+    background-repeat: no-repeat;
+    background-position: 100px;
+    background-size: 150px;
+    background-position-y: 320px;
+    color: black;
+    background-color: white;
+}
+
+
+
+#h1velo {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(70, 130, 180);
+}
+
+#LimparVelo {
+    border: solid 2px black;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(65, 105, 225);
+}
+
+
+
+#dist {
+    margin-left: 10px;
+    border: solid 5px black;
+    font-size: 15px;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: url("./assets/distancia.webp");
+    background-repeat: no-repeat;
+    background-position: 100px;
+    background-size: 90px;
+    background-position-y: 350px;
+    color: black;
+    background-color: white;
+}
+
+#h1Dist {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 255);
+}
+
+#limpardist {
+    border: solid 2px black;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(65, 105, 225);
+}
+
+/* informaçoes  */
+
+#totalInfo {
+    margin: 0;
+    text-align: justify;
+    max-width: 500px;
+    color: black;
+}
+
+.h1 {
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Playfair Display', serif;
+}
+
+.textI {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+
+#link {
+    color: black;
+}
+
+.tabelaMK {
+    margin-left: 50px;
+    background-color: rgb(128, 128, 128);
+    max-width: 245px;
+    padding: 10px;
+    color: white;
+    border: solid 2px black;
+    border-radius: 10px;
+}
